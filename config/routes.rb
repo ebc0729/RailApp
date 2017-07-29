@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'users/edit'
+
+  get 'users/destroy'
+
   get 'sessions/new'
 
   get 'sessions/destroy'
