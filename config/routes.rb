@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'rails/show'
+
+  get 'rails/list'
+
+  get 'rails/record'
+
   get 'users/edit'
 
   get 'users/destroy'
