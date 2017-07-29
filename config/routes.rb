@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
+  get 'sessions/destroy'
+
+  get 'sessions/create'
+
   root 'static_pages#index'
 
   get 'static_pages/help'
