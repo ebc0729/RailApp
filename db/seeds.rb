@@ -7,6 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "csv"
 
+puts "Delete data"
+Area.delete_all
+Company.delete_all
+Line.delete_all
+Station.delete_all
+puts "Finish Deleting"
+
 puts "Insert Area"
 Area.create({name: '北海道'})
 Area.create({name: '東北'})
