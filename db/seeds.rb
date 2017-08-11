@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Area.create({name: '北海道'})
+Area.create({name: '東北'})
+Area.create({name: '関東'})
+Area.create({name: '甲信越'})
+Area.create({name: '東海・北陸'})
+Area.create({name: '近畿'})
+Area.create({name: '中国'})
+Area.create({name: '四国'})
+Area.create({name: '九州'})
+
+
+
+
+
