@@ -6,5 +6,6 @@ class RailsController < ApplicationController
   end
 
   def record
+    @area = Area.all
   end
 end
