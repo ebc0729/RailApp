@@ -5,10 +5,6 @@ Rails.application.routes.draw do
 
   get 'rails/record'
 
-  get 'users/edit'
-
-  get 'users/destroy'
-
   get 'sessions/new'
 
   get 'sessions/destroy'
@@ -23,7 +19,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/new'
 
-  get 'users/new'
+  get  '/signup',  to: 'users#new'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
