@@ -1,3 +1,5 @@
 <%= @user.name %>, <%= @user.email %>
 <%= link_to "Log out", logout_path, method: :delete %>
 <%= link_to "地図を見る", rails_show_path, method: :get %>
+<%= link_to "記録を見る", rails_list_path, method: :get %>
+<%= link_to "記録する", rails_record_path, method: :get %>
