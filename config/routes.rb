@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   get 'rails/record'
 
+  get 'rails/confirmation'
+
+  get 'rails/registered'
+
   get 'sessions/new'
 
   get 'sessions/destroy'

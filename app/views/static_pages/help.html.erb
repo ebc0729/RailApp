@@ -1,3 +1,6 @@
 <h1>StaticPages#help</h1>
 <p>Find me in app/views/static_pages/help.html.erb</p>
+<%= link_to "Log out", logout_path, method: :delete %>
+<%= link_to "会員情報変更", "/users/#{@current_user.id}/edit", method: :get %>
+<%= link_to "help", static_pages_help_path, method: :get %>
 <%= link_to "戻る", :back %>

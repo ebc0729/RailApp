@@ -1,7 +1,7 @@
 <%= @user.name %>, <%= @user.email %>, <%= @user.id %>
 <%= link_to "Log out", logout_path, method: :delete %>
+<%= link_to "会員情報変更", edit_user_path, method: :get %>
 <%= link_to "地図を見る", rails_show_path, method: :get %>
 <%= link_to "記録を見る", rails_list_path, method: :get %>
 <%= link_to "記録する", rails_record_path, method: :get %>
 <%= link_to "help", static_pages_help_path, method: :get %>
-<%= link_to "会員情報変更", edit_user_path, method: :get %>
