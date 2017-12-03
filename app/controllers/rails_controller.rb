@@ -1,5 +1,7 @@
 class RailsController < ApplicationController
   def show
+    p ENV['MAPBOX_ACCESS_KEY'] 
+    gon.mapbox_access_key = ENV['MAPBOX_ACCESS_KEY']
   end
 
   def list
