@@ -1,6 +1,8 @@
 class RailsController < ApplicationController
   def show
     @current_user ||= User.find_by(id: session[:user_id])
+    p ENV['MAPBOX_ACCESS_KEY'] 
+    gon.mapbox_access_key = ENV['MAPBOX_ACCESS_KEY']
   end
 
   def list
