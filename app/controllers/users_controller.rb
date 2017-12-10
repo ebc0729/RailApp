@@ -9,6 +9,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    session[:user_id] = user.id
+    redirect_to root_url
     if @user.save
       log_in @user
       flash[:success] = "ようこそ RailApp へ"
@@ -24,4 +26,8 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :email, :password,
       :password_confirmation)
   end
+
+  def edit
+  end
+
 end

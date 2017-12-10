@@ -1,2 +1,8 @@
 <h1>Rails#show</h1>
 <p>Find me in app/views/rails/show.html.erb</p>
+<%= @current_user.id %>
+
+<%= link_to "記録", rails_record_path, method: :get %>
+<%= link_to "Log out", logout_path, method: :delete %>
+<%= link_to "会員情報変更", "/users/#{@current_user.id}/edit", method: :get %>
+<%= link_to "help", static_pages_help_path, method: :get %>

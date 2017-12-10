@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   get 'rails/record'
 
+  get 'rails/confirmation'
+
+  get 'rails/registered'
+
   get 'sessions/new'
 
   get 'sessions/destroy'
@@ -18,6 +22,10 @@ Rails.application.routes.draw do
   get 'static_pages/destroy'
 
   get 'static_pages/new'
+
+  get 'users/edit'
+  
+  get 'users/show'
 
   get  '/signup',  to: 'users#new'
   post '/signup',  to: 'users#create'
