@@ -2,12 +2,41 @@
 <html>
   <head>
     <title>RailApp</title>
-    <%= favicon_link_tag('setting.png') %>
+    <%= include_gon %>
+    <%= favicon_link_tag('setting.png') %> 
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag "application", media: "all" %>
     <%= javascript_include_tag 'application' %>
     <%= stylesheet_link_tag "reset.css" %>
     <%= stylesheet_link_tag "base.css" %>
+    <script src='https://d3js.org/d3.v3.min.js' charset="utf-8"></script>
+    <script src='https://d3js.org/topojson.v1.min.js'></script>
+    <style>
+      body { margin:0; padding:0; }
+      #map { position:absolute; top:0; bottom:0; width:100%; }
+      html, body, #wrapper {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+      #map { 
+        position:relative; 
+        width: 100%;
+        height: 100%;
+        margin: auto auto;
+      }
+      svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .hidden {
+        display: none;
+      }
+		</style>
+		<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js'></script>
   </head>
 
   <body>
