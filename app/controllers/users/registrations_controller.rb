@@ -24,11 +24,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # DELETE /resource
   def destroy
-    resource.leave
-    Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
-    set_flash_message(:notice, :destroyed)
-    yield resource if block_given?
-    respond_with_navigational(resource){ redirect_to after_sign_out_path_for(resource_name) }
+    if current_user == resource && current_user.admin?
+      flash[:error] == "You can't delete yourself"
+      redirect_to user_path(resource)
+    else
+      super
+    end
   end
 
   # GET /resource/cancel
