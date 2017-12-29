@@ -40,6 +40,20 @@
   </head>
 
   <body>
+    <header>
+      <nav>
+        <% if user_signed_in? %>
+          <%= link_to 'プロフィール変更', edit_user_registration_path %>
+          <%= link_to 'パスワード変更', edit_user_password_path %>
+          <%= link_to '退会', cancel_user_registration_path %>
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+
+        <% else %>
+          <%= link_to 'サインアップ', new_user_registration_path %>
+          <%= link_to 'ログイン', new_user_session_path %>
+        <% end %>
+      </nav>
+    </header>
 		<div class="header">
 			<div class="header-container clearfix">
 				<h1 class="pagetitle">
@@ -47,6 +61,12 @@
 				</h1>
 			</div>
 		</div>
+		<% if notice %>
+　　  <p class="alert alert-notice"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-error"><%= alert %></p>
+    <% end %>
     <% flash.each do |message_type, message| %>
       <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
     <% end %>

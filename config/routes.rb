@@ -1,39 +1,55 @@
 Rails.application.routes.draw do
-  get 'rails/show'
+  get 'home/index'
 
-  get 'rails/list'
+  get 'home/show'
 
-  get 'rails/record'
+  get 'index/show'
 
-  get 'rails/confirmation'
+  get 'index/edit'
 
-  get 'rails/registered'
+  root 'home#index'
+  get 'home/show'
+  get 'home/edit'
 
-  get 'sessions/new'
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
+	
+  # get 'rails/show'
 
-  get 'sessions/destroy'
+  # get 'rails/list'
 
-  get 'sessions/create'
+  # get 'rails/record'
 
-  root 'static_pages#index'
+  # get 'rails/confirmation'
 
-  get 'static_pages/help'
+  # get 'rails/registered'
 
-  get 'static_pages/destroy'
+  # get 'sessions/new'
 
-  get 'static_pages/new'
+  # get 'sessions/destroy'
 
-  get 'users/edit'
+  # get 'sessions/create'
+
+  # # root 'static_pages#index'
+
+  # get 'static_pages/help'
+
+  # get 'static_pages/destroy'
+
+  # get 'static_pages/new'
+
+  # get 'users/edit'
   
-  get 'users/show'
+  # get 'users/show'
 
-  get  '/signup',  to: 'users#new'
-  post '/signup',  to: 'users#create'
+  # get  '/signup',  to: 'users#new'
+  # post '/signup',  to: 'users#create'
 
-  resources :users
+  # resources :users
 
-  get    '/login',   to: 'sessions#new'
-  post   '/login',   to: 'sessions#create'
-  delete '/logout',  to: 'sessions#destroy'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # get    '/login',   to: 'sessions#new'
+  # post   '/login',   to: 'sessions#create'
+  # delete '/logout',  to: 'sessions#destroy'
+  # # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
