@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
+  devise_for :users
+	
+	root 'home#index'
+
   get 'rails/show'
 
   get 'rails/list'
@@ -15,7 +21,7 @@ Rails.application.routes.draw do
 
   get 'sessions/create'
 
-  root 'static_pages#index'
+  # root 'static_pages#index'
 
   get 'static_pages/help'
 
