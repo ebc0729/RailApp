@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   get 'home/show'
   get 'home/edit'
 
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
 	
   # get 'rails/show'
 
