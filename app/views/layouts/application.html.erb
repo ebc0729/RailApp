@@ -40,23 +40,18 @@
   </head>
 
   <body>
-    <header>
-      <nav>
+		<div class="header">
+			<div class="header-container clearfix">
+				<h1 class="pagetitle">
+          <%= image_tag("Rail_Book.png", :size => "273x30", :alt => "") %>
+        </h1>
         <% if user_signed_in? %>
           <%= link_to 'プロフィール変更', edit_user_registration_path %>
           <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-
         <% else %>
           <%= link_to 'サインアップ', new_user_registration_path %>
           <%= link_to 'ログイン', new_user_session_path %>
         <% end %>
-      </nav>
-    </header>
-		<div class="header">
-			<div class="header-container clearfix">
-				<h1 class="pagetitle">
-					<%= image_tag("Rail_Book.png", :size => "273x30", :alt => "") %>
-				</h1>
 			</div>
 		</div>
 		<% if notice %>
