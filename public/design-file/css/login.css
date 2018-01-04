@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+html,
+body,
+.wrapper{
+	background-color: #27395a;
+}
+
+
+/* ログインボックス */
+.box{
+	width: 383px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: rgba(16,36,72,0.8);
+	border: 1px solid rgba(210,210,210,0.35);
+	border-radius: 6px;
+}
+
+.box h2{
+	padding: 18px 0;
+	font-size: 0.875em;
+	background-color: #102448;
+	border-bottom: 1px solid rgba(210,210,210,0.35);
+	border-radius: 6px 6px 0 0;
+}
+
+.box-inner{
+	padding: 36px 0;
+}
+
+ul.input{
+	margin-bottom: 42px;
+}
+
+ul.input li{
+	padding: 37px 0;
+	margin-bottom: 2px;
+	background: -webkit-linear-gradient(to bottom,rgba(91,106,135,0.3),rgba(16,36,72,0.3),rgba(91,106,135,0.3));
+	background: linear-gradient(to bottom,rgba(91,106,135,0.3),rgba(16,36,72,0.3),rgba(91,106,135,0.3));
+	background: -moz-linear-gradient(to bottom,rgba(91,106,135,0.3),rgba(16,36,72,0.3),rgba(91,106,135,0.3));
+}
+
+ul.input li:last-child{
+	margin-bottom: 0;
+}
+
+ul.input li input{
+	width: 256px;
+	height: 2em;
+	outline: none;
+	color: #102448;
+	font-size: 0.75em;
+	padding: 0 15px;
+	background-color: #ddd;
+	border: 1px solid #636363;
+	border-radius: 3px
+}
+
+ul.input li input:focus{
+	background-color: #bef0eb;
+}
+
+ul.input li input:placeholder-shown{
+	color: #697488;
+	font-style: italic;
+}
+
+button{
+	padding: 0;
+	outline: none;
+	border: none;
+	background-color: #17b17c;
+	margin-bottom: 46px;
+	border-radius: 3px;
+}
+
+button a{
+	color: #fff;
+	font-size: 0.75em;
+	display: block;
+	padding: 8px 46px;
+	border-radius: 3px;
+	transition: all 0.2s ease;
+}
+
+button a:hover{
+	background-color: #fff;
+	color: #17b17c;
+	border-radius: 3px;
+}
+
+.new-user,
+.new-user a{
+	font-size: 0.583rem;
+}
+
+.new-user a{
+	text-decoration: underline;
+}
+
+.new-user a:hover{
+	opacity: 0.6;
+}
