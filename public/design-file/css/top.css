@@ -1,28 +1,13 @@
 @charset "UTF-8";
 
-html,
-body,
-.wrapper{
-	height: 100%;
-	font-size: 24px;
-}
-
-.wrapper{
-	background-color: #102448;
-	overflow: hidden;
-}
-
-.container{
-	width: 1000px;
+.box{
 	height: 514px;
 	min-height: 514px;
 	position: absolute;
-	top: 0;
-	bottom: 0;
+	top: 12vh;
 	left: 0;
 	right: 0;
-	margin: auto;
-	z-index: 10;
+	margin: 0 auto;
 }
 
 h1{
@@ -57,19 +42,10 @@ h1 span{
 	width: 210px;
 	padding: 17px 0;
 	border-radius: 3px;
+	transition: all 0.2s ease;
 }
 
-.img-main{
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-	z-index: 0;
-	width: 600px;
-}
-
-@media screen and (max-width:1000px){
-
+.select a:hover{
+	color: rgba(23,177,124,0.8);
+	background-color: #fff;
 }
