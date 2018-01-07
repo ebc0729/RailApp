@@ -3,8 +3,7 @@
   <head>
     <title>RailApp</title>
     <%= include_gon %>
-    <%= favicon_link_tag('setting.png') %> 
-    <%= csrf_meta_tags %>
+    <%= favicon_link_tag('setting.png') %> <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", media: "all" %>
     <%= javascript_include_tag 'application' %>
     <%= stylesheet_link_tag "reset.css" %>
@@ -34,15 +33,15 @@
       .hidden {
         display: none;
       }
-		</style>
-		<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.css' rel='stylesheet' />
+    </style>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.css' rel='stylesheet' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js'></script>
   </head>
 
   <body>
-		<div class="header">
-			<div class="header-container clearfix">
-				<h1 class="pagetitle">
+    <div class="header">
+      <div class="header-container clearfix">
+        <h1 class="pagetitle">
           <%= image_tag("Rail_Book.png", :size => "273x30", :alt => "") %>
         </h1>
         <% if user_signed_in? %>
@@ -52,9 +51,9 @@
           <%= link_to 'サインアップ', new_user_registration_path %>
           <%= link_to 'ログイン', new_user_session_path %>
         <% end %>
-			</div>
-		</div>
-		<% if notice %>
+      </div>
+    </div>
+    <% if notice %>
 　　  <p class="alert alert-notice"><%= notice %></p>
     <% end %>
     <% if alert %>
