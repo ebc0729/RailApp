@@ -3,8 +3,6 @@
 <%= @current_user.id %>
 
 <%= link_to "記録", rails_record_path, method: :get %>
-<%= link_to "Log out", logout_path, method: :delete %>
-<%= link_to "会員情報変更", "/users/#{@current_user.id}/edit", method: :get %>
 <%= link_to "help", static_pages_help_path, method: :get %>
 <div id="map"></div>
 <%= javascript_include_tag 'test_rail.js' %>
