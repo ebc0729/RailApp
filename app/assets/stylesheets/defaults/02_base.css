@@ -39,25 +39,6 @@ body,
 }
 
 /*===========================================
-==================背景画像===================
-=============================================*/
-.img-main{
-	position: absolute;
-	top: 15vh;
-	left: 0;
-	right: 0;
-	width: 600px;
-	margin: 0 auto;
-	z-index: 1;
-}
-
-@media screen and (max-width:600px) {
-.img-main{
-	display: none;
-}
-}
-
-/*===========================================
 =================フォーム一般================
 =============================================*/
 input[type="email"],
@@ -110,25 +91,33 @@ input[type="submit"]:hover {
 ==============header関連の設定==================
 =============================================*/
 header {
+	width: 100%;
+	height: 64px;
+	background-color: #102448;
 	color: #fff;
 	display: block;
 }
 
-header h1 {
-	width: 100%;
-	background-color: #102448;
-	padding: 25px 0 15px 38px;
+header a {
+	color: #fff;
+	font-size: 0.75rem;
+	text-decoration: none;
+	transition: all 0.2s ease;
 }
 
-div.rightmenu {
-	display: inline;
-	float: right;
-	margin-right: 20px;
+header a:hover {
+	opacity: 0.6;
 }
 
-.rightmenu li {
+header > h1 {
+	display: block;
 	float: left;
-	margin-left: 20px;
+	margin: 25px 0 0 38px;
+}
+
+header > div.rightmenu {
+	float: right;
+	margin: 25px 20px 0 0;
 }
 
 .csv{
