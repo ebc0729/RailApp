@@ -4,14 +4,16 @@
 <%= link_to "help", static_pages_help_path, method: :get %>
 <p>
 <div class="choice clearfix" id="allarea">
-    <ul>
+    <ul id="areas">
     <% for a in @area %>
-        <li class="area"><%= a[:name] %></li>
+        <%= content_tag(:li, a.name, :class => 'area', :id => a.id.to_s) %>
     <% end %>
     </ul>
 </div>
 
 <div class="choice clearfix" id="allcompany" style="display: none">
-    <ul>
+    <ul id="companies">
     </ul>
 </div>
+
+<%= javascript_include_tag 'record.js' %>

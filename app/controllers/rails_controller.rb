@@ -10,15 +10,14 @@ class RailsController < ApplicationController
   end
 
   def record
-    @area
+    gon.api_base_url = api_base_url
     res = Faraday.get api_base_url + '/areas'
     if res.success?
       res_json = JSON.parse(res.body)
-      @area = res_json.map{|r| {id: r['id'], name: r['name']} }
+      @area = res_json.map{|r| Area.new({id: r['id'], name: r['name']}) }
     else
       @area = nil
     end
-    p @area
     @company = Company.where({area_id: 1})
     # @line = Route.where({company_id: 2})
     # @station = Station.where({rail_id: 3})
