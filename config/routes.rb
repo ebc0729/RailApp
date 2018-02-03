@@ -12,9 +12,10 @@ Rails.application.routes.draw do
   get 'home/edit'
 
   devise_for :users, controllers: {
+    passwords: 'users/passwords',
+    registrations: 'users/registrations',
     sessions: 'users/sessions'
   }
-	
   get 'rails/show'
 
   get 'rails/list'
