@@ -4,6 +4,7 @@
 <%= link_to "help", static_pages_help_path, method: :get %>
 <p>
 <div class="choice clearfix" id="allarea">
+<h3 class="choice-title">乗車地域選択</h3>
     <ul id="areas">
     <% for a in @area %>
         <%= content_tag(:li, a.name, :class => 'area', :id => a.id.to_s) %>
@@ -12,11 +13,13 @@
 </div>
 
 <div class="choice clearfix" id="allcompany" style="display: none">
+<h3 class="choice-title">鉄道会社選択</h3>
     <ul id="companies">
     </ul>
 </div>
 
 <div class="choice clearfix" id="allroute" style="display: none">
+<h3 class="choice-title">路線選択</h3>
     <ul id="routes">
     </ul>
 </div>
