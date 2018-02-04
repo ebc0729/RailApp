@@ -65,6 +65,15 @@ $(document).ready(function(){
         var route_id = $(this).attr('id');
         getStations(route_id);
     });
+
+    $(document).on('click', '[name=regist]', function(){
+        var start_id = $('#startStation').val();
+        var end_id = $('#endStation').val();
+        var date = $('[name=recorddate]').val();
+        $('[name=data-start_id]').val(start_id);
+        $('[name=data-end_id]').val(end_id);
+        $('[name=data-date]').val(date);
+    });
 });
 
 function getCompanies(area_id) {
