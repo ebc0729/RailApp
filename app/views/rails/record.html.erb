@@ -16,4 +16,26 @@
     </ul>
 </div>
 
+<div class="choice clearfix" id="allroute" style="display: none">
+    <ul id="routes">
+    </ul>
+</div>
+
+<div id="pulldown" class="choice">
+    <div class="pulldown">
+        <div class="on clearfix">
+            <h3 class="pulldown-title">乗車駅</h3>
+                <select name="start" id="startStation" class="select-onstation large_box">
+                    <option value="駅選択" selected>[駅を選択]</option>
+                </select>
+        </div>
+        <div class="off clearfix">
+            <h3 class="pulldown-title">降車駅</h3>
+                <select name="stop" id="endStation" class="select-offstation large_box">
+                </select>
+        </div>
+        <input type="date" name="recorddate">
+    </div>
+</div>
+
 <%= javascript_include_tag 'record.js' %>
