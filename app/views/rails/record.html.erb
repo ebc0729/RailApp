@@ -4,28 +4,45 @@
 <%= link_to "help", static_pages_help_path, method: :get %>
 <p>
 <div class="choice clearfix" id="allarea">
-<ul>
-<% for a in @area %>
-    <li class="area"><%= a.name %></li>
-<% end %>
-</ul>
-</div>
-
-<div class="choice clearfix" id="allcompany">
-    <h3 class="choice-title">鉄道会社選択</h3>
-	<ul class="scroll" id="companyList">
-	<% for c in @company %>
-        <li class="company"><%= c.name %></li>
+<h3 class="choice-title">乗車地域選択</h3>
+    <ul id="areas">
+    <% for a in @area %>
+        <%= content_tag(:li, a.name, :class => 'area', :id => a.id.to_s) %>
     <% end %>
-	</ul>
+    </ul>
 </div>
 
-<div class="choice clearfix" id="allline">
-    <h3 class="choice-title">路線選択</h3>
-	<ul class="scroll" id="lineList">
-	<% for l in @line %>
-        <li class="line"><%= l.name %></li>
-    <% end %>    
-	</ul>
+<div class="choice clearfix" id="allcompany" style="display: none">
+<h3 class="choice-title">鉄道会社選択</h3>
+    <ul id="companies">
+    </ul>
 </div>
 
+<div class="choice clearfix" id="allroute" style="display: none">
+<h3 class="choice-title">路線選択</h3>
+    <ul id="routes">
+    </ul>
+</div>
+
+<div id="pulldown" class="choice">
+    <div class="pulldown">
+        <div class="on clearfix">
+            <h3 class="pulldown-title">乗車駅</h3>
+                <select name="start" id="startStation" class="select-onstation large_box">
+                    <option value="駅選択" selected>[駅を選択]</option>
+                </select>
+        </div>
+        <div class="off clearfix">
+            <h3 class="pulldown-title">降車駅</h3>
+                <select name="stop" id="endStation" class="select-offstation large_box">
+                </select>
+        </div>
+        <input type="date" name="recorddate">
+        <input type="button" name="regist" value="登録ボタン">
+        <input type="hidden" name="data-start_id">
+        <input type="hidden" name="data-end_id">
+        <input type="hidden" name="data-date">
+    </div>
+</div>
+
+<%= javascript_include_tag 'record.js' %>

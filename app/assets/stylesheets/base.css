@@ -217,7 +217,7 @@ html,body,.container,.map{
 
 .choice-title{
 	font-size: 16px;
-	color: #fff;
+	color: #000;
 	font-weight: bold;
 	width: 178px;
 	text-align: center;
@@ -332,7 +332,7 @@ html,body,.container,.map{
 	width: 57px;
 	font-size: 16px;
 	letter-spacing: 2.56px;
-	color: #fff;
+	color: #000;
 	font-weight: bold;
 	padding: 10px 0;
 	margin-top: 4px;
