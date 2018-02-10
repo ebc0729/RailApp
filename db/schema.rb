@@ -18,14 +18,6 @@ ActiveRecord::Schema.define(version: 20171229103950) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "authentications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "user_id"
-    t.string "provider"
-    t.string "uid"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "companies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "area_id"
     t.string "name"
