@@ -21,7 +21,7 @@
         <%= f.submit "ログイン" %>
       </div>
     <% end %>
-    <p class="new-user">新規ユーザー登録は<a href="#">こちら</a></p>
+    <p class="new-user">新規ユーザー登録は<%= link_to "こちら", :controller => "registrations", :action => "new" %></p>
   </div><!-- .box-inner -->
 </div><!-- .box -->
 <%= render "users/shared/links" %>
