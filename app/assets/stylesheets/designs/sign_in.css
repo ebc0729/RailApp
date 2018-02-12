@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+html,
+body,
+.wrapper{
+	background-color: #27395a;
+	color: #fff;
+}
+
+.img-main{
+	position: absolute;
+	top: 15vh;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 1;
+	width: 600px;
+}
+
+@media screen and (max-width:600px) {
+	.img-main{
+		display: none;
+	}
+}
+
+.box {
+	width: 383px;
+	margin: 80px auto 0 auto;
+	text-align: center;
+	background-color: rgba(16,36,72,0.8);
+	border: 1px solid rgba(210,210,210,0.35);
+	border-radius: 6px;
+}
+
+.box h2 {
+	padding: 18px 0;
+	font-size: 0.875em;
+	background-color: #102448;
+	border-bottom: 1px solid rgba(210,210,210,0.35);
+	border-radius: 6px 6px 0 0;
+}
+
+.box-inner {
+	padding: 36px 0 20px 0;
+}
+
+.field ul li {
+	padding: 37px 0;
+	margin-bottom: 2px;
+	background: -webkit-linear-gradient(to bottom,rgba(91,106,135,0.3),rgba(16,36,72,0.3),rgba(91,106,135,0.3));
+	background: linear-gradient(to bottom,rgba(91,106,135,0.3),rgba(16,36,72,0.3),rgba(91,106,135,0.3));
+	background: -moz-linear-gradient(to bottom,rgba(91,106,135,0.3),rgba(16,36,72,0.3),rgba(91,106,135,0.3));
+}
+
+.field ul li:last-child{
+	margin-bottom: 0;
+}
+
+div.remember-me {
+	margin: 20px 0;
+}
+
+div.remember-me label {
+	font-size: 0.75rem;
+}
+
+.new-user {
+	margin-top: 36px;
+}
+
+.new-user,
+.new-user a{
+	color: #fff;
+	font-size: 0.583rem;
+}
+
+.new-user a{
+	text-decoration: underline;
+}
+
+.new-user a:hover{
+	opacity: 0.6;
+}
