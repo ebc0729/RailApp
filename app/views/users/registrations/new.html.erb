@@ -15,14 +15,12 @@
 
   <div class="field">
     <%= f.label :age %><br />
-    <%= f.number_field :age, autofocus: true %>
+    <%= f.select :age, {"10代" => 10, "20代" => 20, "30代" => 30, "40代" => 40, "50代" => 50} %>
   </div>
 
   <div class="field">
     <%= f.label :gender %><br />
-    <%= f.text_field :gender, autofocus: true %>
-  </div>
-
+    <%= f.select :gender, {"男" => "male", "女" => "female"} %>
   <div class="field">
     <%= f.label :favorite_route %><br />
     <%= f.text_field :favorite_route, autofocus: true %> 
