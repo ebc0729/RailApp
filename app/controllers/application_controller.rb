@@ -5,7 +5,4 @@ class ApplicationController < ActionController::Base
     @current_user ||= current_user
   end
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
-  end
 end

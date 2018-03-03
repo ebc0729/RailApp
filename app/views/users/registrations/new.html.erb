@@ -9,8 +9,23 @@
   </div>
 
   <div class="field">
-    <%= f.label :nickname %><br />
-    <%= f.nickname_field :nickname, autofocus: true %>
+    <%= f.label :username %><br />
+    <%= f.text_field :username, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.number_field :age, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.text_field :gender, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :favorite_route %><br />
+    <%= f.text_field :favorite_route, autofocus: true %> 
   </div>
 
   <div class="field">
