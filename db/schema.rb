@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180107045606) do
+ActiveRecord::Schema.define(version: 20180303032554) do
 
   create_table "areas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "authentications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "user_id"
+    t.string "provider"
+    t.string "uid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -54,7 +62,9 @@ ActiveRecord::Schema.define(version: 20180107045606) do
     t.datetime "updated_at", null: false
     t.string "username"
     t.datetime "deleted_at"
-    t.string "nickname"
+    t.integer "age"
+    t.string "gender"
+    t.string "favorite_route"
     t.index ["deleted_at"], name: "index_users_on_deleted_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
