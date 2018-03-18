@@ -20,3 +20,4 @@
 .byebug_history
 /vendor/*
 public/assets/*
+public/packs/*
