@@ -9,6 +9,7 @@ function mapDraw(geojson){
     var map = new mapboxgl.Map({
         container:'map', // containerid
         style:'mapbox://styles/mapbox/streets-v8',
+        // style: 'mapbox://styles/kumakame/cjbkgydwp295s2sqsjrsgejln',
         center:[141.15448379999998, 39.702053],
         zoom: 4
     });
