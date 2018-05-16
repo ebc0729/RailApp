@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-turbolinks'
 gem 'gon'
 gem 'dotenv-rails'
+gem 'webpacker', github: 'rails/webpacker'
 
 gem 'devise'
 gem 'paranoia'
